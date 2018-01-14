@@ -17,23 +17,15 @@ public class CommandHandlerTest {
     ICommandHandler commandHandler;
     IViewController viewController;
     IMainList mainList;
-    //final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    //final String LINE_SEPARATOR = System.getProperty("line.separator");
 
     @Before
     public void init() {
-        //System.setOut(new PrintStream(outContent));
         mainList = new MainList();
         commandHandler = new CommandHandler();
         viewController = new ViewController();
         viewController.addToViewer(mainList);
 
     }
-
-    /*@After
-    public void cleanUpStreams() {
-        System.setOut(null);
-    }*/
 
     @Test
     public void canHandCreateListCommand() {
