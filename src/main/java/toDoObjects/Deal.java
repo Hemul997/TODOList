@@ -51,12 +51,12 @@ public class Deal implements IDeal {
 
     @Override
     public void renameTo(int num, String newName) {
-        setName(newName);
+        //setName(newName);
     }
 
     @Override
     public void changeStatus(int dealNum, IStatus newStatus) {
-        status = newStatus;
+        //status = newStatus;
     }
 
     @Override

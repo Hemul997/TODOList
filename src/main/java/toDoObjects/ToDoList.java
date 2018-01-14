@@ -35,7 +35,7 @@ public class ToDoList implements IToDoList {
 
     @Override
     public void deleteList(int listNum) {
-        System.out.println("You can't create list here");
+        System.out.println("You can't delete list here");
     }
 
     @Override

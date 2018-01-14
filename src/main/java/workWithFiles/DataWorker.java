@@ -10,7 +10,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class DataWorker implements IDataWorker {
@@ -93,7 +92,7 @@ public class DataWorker implements IDataWorker {
         for (IToDoList list : lists) {
             fileNames.add(list.getName());
         }
-        return  fileNames;
+        return fileNames;
     }
 
     public void deleteDifferences(IMainList mainList, File dir) throws  Exception {

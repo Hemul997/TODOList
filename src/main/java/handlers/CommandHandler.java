@@ -72,7 +72,7 @@ public class CommandHandler implements ICommandHandler {
                 throw new Exception();
             }
 
-            String command = commandArr[0];
+            //String command = commandArr[0];
             switch (commandArr[0]) {
                 case CREATE_COMMAND:
                     if (commandArr.length < MIN_CREATE_COMMAND_SIZE) {
@@ -99,7 +99,7 @@ public class CommandHandler implements ICommandHandler {
                     if (obj != null) {
                         viewer.addToViewer(obj);
                     } else {
-                        System.out.println(INVALID_COMMAND_ERROR_MSG);
+                        throw new Exception(INVALID_COMMAND_ERROR_MSG);
                     }
                     break;
                 case DELETE_COMMAND:

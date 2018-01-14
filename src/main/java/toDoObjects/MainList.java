@@ -9,7 +9,6 @@ public class MainList implements IMainList {
     List<IToDoList> lists = new ArrayList<>();
 
     public MainList() {
-
     }
 
     public MainList(List<IToDoList> lists) {
