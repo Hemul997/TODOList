@@ -21,14 +21,12 @@ public class DataWorkerTest {
         dataWorker = new DataWorker();
         mainList = new MainList();
         dir = new File("src/main/resources/test");
-
     }
 
     @Test
     public void canDefineStatus() {
         String status = " Completed";
         IStatus iStatus = new Completed();
-        //System.out.println(dataWorker.defineStatus(status).toString());
         assertEquals(dataWorker.defineStatus(status).toString(), iStatus.toString());
     }
     @Test
@@ -42,7 +40,6 @@ public class DataWorkerTest {
         try {
             mainList.createList("New list");
             mainList.getLists().get(0).createDeal("deal");
-            //mainList.createList("deal list");
             dataWorker.convertDataToFiles(mainList, dir);
             IMainList testList = dataWorker.convertDataFromFiles(dir);
             assertTrue(testList.getLists().size() > 0);
@@ -50,7 +47,6 @@ public class DataWorkerTest {
             assertTrue(outFile.exists());
             outFile.deleteOnExit();
         } catch (Exception ex) {
-
         }
     }
 
@@ -68,6 +64,4 @@ public class DataWorkerTest {
         }
         emptyDir.deleteOnExit();
     }
-
-
 }
